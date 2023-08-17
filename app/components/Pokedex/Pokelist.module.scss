@@ -1,0 +1,8 @@
+.poke-list-grid {
+    list-style: none;
+    padding-left: 0px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}

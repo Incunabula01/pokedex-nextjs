@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../app/color-swatches.scss";
+
+
+@layer base {
+ body {
+    background-color: #dbf6e9;
+    color: $dark-blue;
+    font-family: var(--font-roboto-mono), monospace;
+ }
+ h1,h2,h3,h4 {
+      font-family: var(--font-press-start-2p), cursive;
+      text-transform: capitalize;
+  }
+}
+
+h1 {
+    font-size: 57px;
+}
+
+#loaderOverlay {
+    height: 100%;
+    position: absolute;
+    z-index: 9000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $transparent-white
+}
+
+#loader {
+    border: 10px solid $orange;
+    border-radius: 50%;
+    border-top: 10px solid lighten($red-magenta, 5);
+    border-right: 10px solid lighten($red-magenta, 5);
+    border-bottom: 10px solid $orange;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: -5vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#list,
+#searchResult {
+    position: relative;
+}
+
+
+
+

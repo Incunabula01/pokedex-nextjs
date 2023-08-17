@@ -1,0 +1,73 @@
+@import '../../color-swatches.scss';
+
+.pagination-container {
+    background-color: $orange;
+    margin: 10px;
+    flex-grow: 3;
+    border-radius: 10px;
+}
+
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-left: 0;
+    .pagination-item{
+        padding: 0 12px;
+        height: 32px;
+        text-align: center;
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        letter-spacing: 0.01071em;
+        border-radius: 16px;
+        line-height: 1.43;
+        font-size: 13px;
+        min-width: 32px;
+        button {
+            padding: 0;
+            background: none;
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $light-orange;
+            border: 2px solid $dark-blue;
+            border-radius: 8px;
+            // margin: 10px;
+            padding: 0.25rem;
+            flex-grow: 1;
+            min-width: 50px;
+            cursor: pointer;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            transition: transform 0.25s ease-out;
+        
+            &:hover {
+                background-color: darken($light-orange, 15%);
+                cursor: pointer;
+            }
+            svg {
+                color: $dark-blue;
+            }
+        }
+
+        .dots {
+            color: $dark-blue;
+
+            &:hover {
+                background-color: $light-orange;
+                cursor: not-allowed;
+            }
+        }
+        
+        .arrow-left {
+            transform: rotate(180deg);
+        }
+        .selected {
+            transform: scale(1.35);
+        }
+    }
+}

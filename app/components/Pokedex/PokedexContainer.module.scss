@@ -1,0 +1,41 @@
+@import '../../color-swatches.scss';
+
+.pokedex-container {
+    background-color: $red-magenta;
+    margin: 0 15%;
+    width: 70%;
+    min-height: 475px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 16px;
+}
+
+.pokedex-pagination {
+    background-color: $red-magenta;
+    margin: 1rem 15%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 16px;
+}
+
+.pokelist-container {
+    width: 300px;
+    overflow-y: auto;
+    height: 455px;
+    background-color: $orange;
+    margin: 10px 5px 10px 10px;
+    flex-grow: 3;
+    border-radius: 10px 1px 1px 10px;
+}
+
+.poke-search-result-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    flex-grow: 1;
+    margin: 10px 10px 10px 5px;
+    background-color: $orange;
+    height: 455px;
+    border-radius: 1px 10px 10px 1px;
+}
