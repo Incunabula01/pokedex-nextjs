@@ -1,4 +1,4 @@
-@import '../../color-swatches.scss';
+@import './color-swatches.scss';
 
 .pokedex-container {
     background-color: $red-magenta;
@@ -22,20 +22,9 @@
 .pokelist-container {
     width: 300px;
     overflow-y: auto;
-    height: 455px;
+    height: 80vh;
     background-color: $orange;
-    margin: 10px 5px 10px 10px;
+    margin: 10px;
     flex-grow: 3;
-    border-radius: 10px 1px 1px 10px;
-}
-
-.poke-search-result-container {
-    display: flex;
-    align-items: center;
-    width: 300px;
-    flex-grow: 1;
-    margin: 10px 10px 10px 5px;
-    background-color: $orange;
-    height: 455px;
-    border-radius: 1px 10px 10px 1px;
+    border-radius: 10px;
 }

@@ -1,20 +1,38 @@
-import react from 'react';
 
-import { usePagination, DOTS, PaginationProps } from '../../Hooks/usePagination';
+
+import { Pokemon } from 'pokenode-ts';
+import { usePagination, DOTS, PaginationProps } from '../../hooks/usePagination';
 import { ArrowIcon } from '../ArrowIcon/ArrowIcon';
 import styles from './Pagination.module.scss';
+import { useMemo, useState } from 'react';
 
 type PropTypes = PaginationProps & {
     // data: Array<NamedAPIResource>;
-    onPageChange: (currentPage: number | string) => void;
+    pokemonData: {}
 }
+
+const PAGE_SIZE = 8;
+
 const Pagination = ({ 
-    onPageChange,
     totalCount,
     siblingCount = 1,
     currentPage,
     pageSize
  }: PropTypes) => {
+    // WIP
+    const [pokemon, setPokemon] = useState<Pokemon>();
+    const [currentPage, setCurrentPage] = useState(1);
+
+
+    const currentPokeData = useMemo(() => {
+        if (pokemonData.length > 0) {
+            const firstPageIndex = (currentPage - 1) * PAGE_SIZE;
+            const lastPageIndex = firstPageIndex + PAGE_SIZE;
+            return pokemonData.slice(firstPageIndex, lastPageIndex);
+        }
+        return [];
+    }, [currentPage, pokemonList]);
+
     const paginationRange = usePagination({
         currentPage,
         totalCount,

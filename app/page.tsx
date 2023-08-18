@@ -1,17 +1,28 @@
 // import Image from 'next/image'
+import { PokemonClient, Pokemon, NamedAPIResource } from "pokenode-ts";
+import { getPokemonList } from "./api/api";
+
 import PokedexContainer from "./components/Pokedex/PokedexContainer";
 
-export default function Home() {
+export default async function Home() {
+  const data: Array<NamedAPIResource> = await getPokemonList();
 
   return (
-    <main className="flex min-h-screen flex-col">
-      <header className="text-center p-1">
-        <h1>Pokedex</h1>
-      </header>
-      <section className="p-2">
-        <PokedexContainer/>
-      </section>
-    </main>
+    <>
+     <PokedexContainer pokeData={data}/>
+      {/* <section className={styles['pokedex-pagination']}> */}
+        {/* <Pagination
+                    currentPage={currentPage}
+                    totalCount={pokemonList.length}
+                    pageSize={PAGE_SIZE}
+                    siblingCount={2}
+                    onPageChange={page => {
+                        if (typeof page === 'number') {
+                            setCurrentPage(page);
+                        }
+                    }} /> */}
+      {/* </section> */}
+    </>    
   )
 }
 
