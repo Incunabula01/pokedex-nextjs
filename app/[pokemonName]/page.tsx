@@ -1,4 +1,3 @@
-import pokeballDefault from 'public/pokeball.png';
 import styles from './page.module.scss';
 import { fetchPokemon } from '../api/api';
 import PokemonImage from '../components/Utils/PokemonImage';
@@ -10,8 +9,7 @@ type PokemonPageProps = {
 export default async function PokemonPage({ params }: PokemonPageProps) {
     const { pokemonName } = params;
     const pokemonObject = await fetchPokemon(pokemonName);
-    const pokeBall = pokeballDefault as StaticImport;
-    const pokemanImg: string | StaticImport  = pokemonObject?.sprites?.versions ? pokemonObject.sprites.versions["generation-v"]["black-white"].animated.front_default! : pokeBall!;
+    const pokemanImg: string | StaticImport = pokemonObject?.sprites.versions["generation-v"]["black-white"].animated.front_default!;
 
     return (
         pokemonObject &&  

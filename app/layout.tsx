@@ -41,19 +41,6 @@ export default function RootLayout({
               {children}
             </div>
             </section>
-          {/* WIP Will be added next release
-          <section className={styles['pokedex-pagination']}>
-            <Pagination
-                    currentPage={currentPage}
-                    totalCount={pokemonList.length}
-                    pageSize={PAGE_SIZE}
-                    siblingCount={2}
-                    onPageChange={page => {
-                        if (typeof page === 'number') {
-                            setCurrentPage(page);
-                        }
-                    }} />
-          </section> */}
           </main>
       </body>
     </html>
