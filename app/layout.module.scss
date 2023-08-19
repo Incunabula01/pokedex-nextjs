@@ -4,7 +4,7 @@
     background-color: $red-magenta;
     margin: 0 15%;
     width: 70%;
-    min-height: 475px;
+    min-height: 50vh;
     display: flex;
     flex-wrap: wrap;
     border-radius: 16px;
@@ -22,7 +22,6 @@
 .pokelist-container {
     width: 300px;
     overflow-y: auto;
-    height: 80vh;
     background-color: $orange;
     margin: 10px;
     flex-grow: 3;

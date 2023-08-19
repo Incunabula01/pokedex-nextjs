@@ -1,0 +1,18 @@
+@import './color-swatches.scss';
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-orange;
+    border: 2px solid $dark-blue;
+    border-radius: 8px;
+    padding: 10px;
+    height: 100%;
+    svg {
+        color: $orange;
+        width: 200px;
+        height: 200px;
+    }
+}

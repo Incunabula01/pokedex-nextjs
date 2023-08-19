@@ -20,7 +20,7 @@ export default function PokemonImage({ image, width, height, name }: PokemonImag
                 alt={`Picture of ${name}`} 
                 priority 
                 style={{'objectFit': 'contain'}}
-                className="transition-opacity opacity-0 duration-[2s]"
+                className="transition-opacity opacity-0 duration-[1.5s]"
                 onLoadingComplete={(image) => image.classList.remove('opacity-0')}
                 />
         </>
