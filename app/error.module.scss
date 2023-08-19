@@ -1,0 +1,20 @@
+@import './color-swatches.scss';
+@import './mixins.scss';
+
+.error-container {
+    @include poke-container;
+    button {
+        background: $orange;
+        color: $dark-blue;
+        &:hover {
+            background: darken($orange, 25%);
+        }
+    }
+    a {
+        color: $dark-blue;
+        border: 1px solid $orange;
+        &:hover {
+            background-color: $orange;
+        }
+    }
+}
