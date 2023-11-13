@@ -12,5 +12,8 @@ Then run the dev enviroment:
 npm start
 ```
 
-You can view the production version of this projet on Vercel:
+You can view the production version of this project on Vercel:
 [Pokedex App](https://pokedex-nextjs-steel.vercel.app/)
+
+Please report any bugs to my email with the message 'Pokedex Bug [Bug-type]':
+[Joe Widener](jwidener08@gmail.com)
